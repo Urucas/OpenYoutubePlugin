@@ -27,3 +27,8 @@ cordova.exec(
   ["vid"]
 );
 </code>
+
+License
+=======
+The source Code is available under same licenses as openyoutubeactivity which is :
+Apache License 2.0
