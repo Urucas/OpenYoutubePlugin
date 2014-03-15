@@ -1,3 +1,4 @@
+
 try{
     var openyt = {
         /* Params
@@ -22,12 +23,12 @@ try{
 		 * Params
 		 * @url: String (valud youtube url)
 		 */
-		parseID: function(url) {
+		parseID: function(uri) {
 		
 			var vars = {};
-	    	var parts = urlString.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-				console.log(key);
-				console.log(value);
+	    	var parts = uri.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+//				console.log(key);
+//				console.log(value);
 		        vars[key] = value;
 			});
 			return vars["v"];
@@ -36,5 +37,5 @@ try{
     module.exports = openyt;
 
 }catch(e){
-	console.log("toast->"+e.message)
+	console.log("openyt plugin error --> "+e.message);
 }
