@@ -1,7 +1,17 @@
 package com.urucas.plugins;
 
-import org.apache.cordova.api.CallbackContext;
-import org.apache.cordova.api.CordovaPlugin;
+/*!
+ *  
+ * OpenYoutTubePlugin.java
+ * Created By Urucas
+ * 
+ * OpenYouTubePlugin is a phonegap extension of the openyoutubeactivity created by Keyes Labs, 
+ * you can check the source code in https://code.google.com/p/android-youtube-player/
+ * 
+ */
+
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 
