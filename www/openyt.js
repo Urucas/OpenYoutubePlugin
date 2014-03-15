@@ -1,13 +1,11 @@
 try{
     var openyt = {
-        /*
-		 *
-		 * @ytid: String 
+        /* Params
+		 * @ytid: String (youtube video id) 
 		 * @success: Function
 		 * @error: Function
-		 *
 		 */
-        open: function(ytid, duration, success, error){
+        open: function(ytid, success, error){
 			if(ytid == undefined) {
 				console.log("toast called without message");
 				return;
@@ -19,7 +17,21 @@ try{
 				error = null;
 			}
             cordova.exec( success, error, "OpenYouTubePlugin", "open", [ytid] );
-        }
+        },
+		/*
+		 * Params
+		 * @url: String (valud youtube url)
+		 */
+		parseID: function(url) {
+		
+			var vars = {};
+	    	var parts = urlString.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+				console.log(key);
+				console.log(value);
+		        vars[key] = value;
+			});
+			return vars["v"];
+		}
     }
     module.exports = openyt;
 
