@@ -17,6 +17,10 @@
                 <param name="android-package" value="com.urucas.plugins.OpenYouTubePlugin"/>
             </feature>
 		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.urucas.plugins.OpenYouTubePlugin" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        </config-file>
+
         <source-file src="src/android/com/urucas/plugins/OpenYouTubePlugin.java"
 			target-dir="src/com/urucas/plugins"/>
 		<source-file src="src/android/libs/openyoutubeactivity.jar" target-dir="libs/"/>
