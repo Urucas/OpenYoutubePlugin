@@ -3,30 +3,31 @@ OpenYouTubePlugin
 OpenYouTubePlugin is a phonegap extension of the openyoutubeactivity 
 created by Keyes Labs, you can check the source code in https://code.google.com/p/android-youtube-player/
 
+Available for Android & Cordova >= 3.0
+
 
 Installation
 ============
 
-* Add to Build Path the **openyoutubeactivity.jar** from /libs folder
+Via cordova command-line: 
 
-* Add the plugin markup to the **config.xml** file of the phonegap project 
-``<plugin name="OpenYouTubePlugin" value="com.urucas.plugins.OpenYouTubePlugin"/>``
-
-* Add the activity to your manifest
-``<activity android:name="com.keyes.youtube.OpenYouTubePlayerActivity" android:screenOrientation="landscape"></activity>``
+```cordova plugin add https://github.com/Urucas/OpenYoutubePlugin.git```
 
 Usage
 =====
 
-<code>
-cordova.exec(
-  function(a){ /* success callback */ }, 
-  function(err) { /* error callback */ }, 
-  "OpenYouTubePlugin", 
-  "open",
-  ["vid"]
-);
-</code>
+
+```
+var vid = window.openyt.parseID(url);
+// parse youtube url id, possible urls formats are:
+// * http://www.youtube.com/watch?v=QtNJ_OOOJQQ
+// * http://youtu.be/QtNJ_OOOJQQ
+
+if(vid != null) {
+  // shows youtube activity with yt video id passed as param
+  window.openyt.open(vid);
+}
+```
 
 License
 =======
