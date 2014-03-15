@@ -18,7 +18,7 @@
             </feature>
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:name="com.urucas.plugins.OpenYouTubePlugin" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+            <activity android:name="com.keyes.youtube.OpenYouTubePlayerActivity" android:screenOrientation="landscape" />
         </config-file>
 
         <source-file src="src/android/com/urucas/plugins/OpenYouTubePlugin.java"
