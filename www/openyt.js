@@ -24,14 +24,18 @@ try{
 		 * @url: String (valud youtube url)
 		 */
 		parseID: function(uri) {
-		
-			var vars = {};
-	    	var parts = uri.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-//				console.log(key);
-//				console.log(value);
-		        vars[key] = value;
-			});
-			return vars["v"];
+
+			if(uri.indexOf("http://youtu.be/")!= -1) {
+				return uri.replace("http://youtu.be/","");
+
+			}else {
+				var vars = {}
+				var parts = uri.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+			        vars[key] = value;
+				});
+				return vars["v"];
+			}
+			return null;
 		}
     }
     module.exports = openyt;
