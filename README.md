@@ -5,6 +5,7 @@ created by Keyes Labs, you can check the source code in https://code.google.com/
 
 Available for Android & Cordova >= 3.0
 
+Now fits the fullscreen!
 
 Installation
 ============
